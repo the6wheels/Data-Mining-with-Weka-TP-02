@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     StarWars
+Instances:    1186
+Attributes:   10
+              have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+              which-character-shot-first
+              are-you-familiar-with-the-expanded-universe
+              do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+              gender
+              age
+              household-income
+              education
+              do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+              do-you-consider-yourself-to-be-a-fan-of-the-star-wars-film-franchise
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.35 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         318               75.895  %
+Incorrectly Classified Instances       101               24.105  %
+Kappa statistic                          0.4439
+Mean absolute error                      0.2035
+Root mean squared error                  0.3451
+Relative absolute error                 67.759  %
+Root relative squared error             88.4744 %
+Total Number of Instances              419     
+Ignored Class Unknown Instances                174     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        0.000    ?          ?        ?          ?        ?         ?         ?
+                 0.551    0.129    0.698      0.551    0.616      0.450    0.703     0.517     No
+                 0.871    0.449    0.782      0.871    0.824      0.450    0.801     0.786     Yes
+Weighted Avg.    0.759    0.337    0.753      0.759    0.751      0.450    0.767     0.692     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+   0   0   0 |   a = ?
+   0  81  66 |   b = No
+   0  35 237 |   c = Yes
+

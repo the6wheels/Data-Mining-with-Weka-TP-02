@@ -1,0 +1,123 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     StarWars
+Instances:    1186
+Attributes:   10
+              have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+              which-character-shot-first
+              are-you-familiar-with-the-expanded-universe
+              do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+              gender
+              age
+              household-income
+              education
+              do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+              do-you-consider-yourself-to-be-a-fan-of-the-star-wars-film-franchise
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                                                   Class
+Attribute                                                              ?     No    Yes
+                                                                     (0) (0.34) (0.66)
+=======================================================================================
+have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+  No                                                                  1.0    1.0    1.0
+  Yes                                                                 1.0  285.0  553.0
+  [total]                                                             2.0  286.0  554.0
+
+which-character-shot-first
+  ?                                                                   1.0    1.0    1.0
+  Greedo                                                              1.0   47.0  152.0
+  Han                                                                 1.0   58.0  269.0
+  none                                                                1.0  181.0  127.0
+  [total]                                                             4.0  287.0  549.0
+
+are-you-familiar-with-the-expanded-universe
+  ?                                                                   1.0    1.0    1.0
+  No                                                                  1.0  256.0  361.0
+  Yes                                                                 1.0   29.0  186.0
+  [total]                                                             3.0  286.0  548.0
+
+do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+  ?                                                                   1.0    1.0    1.0
+  No                                                                  1.0   23.0   93.0
+  Yes                                                                 1.0    7.0   94.0
+  [total]                                                             3.0   31.0  188.0
+
+gender
+  ?                                                                   1.0    1.0    1.0
+  Female                                                              1.0  160.0  239.0
+  Male                                                                1.0  121.0  304.0
+  [total]                                                             3.0  282.0  544.0
+
+age
+  18-29                                                               1.0   57.0  125.0
+  30-44                                                               1.0   58.0  151.0
+  45-60                                                               1.0   87.0  155.0
+  60                                                                  1.0   81.0  114.0
+  ?                                                                   1.0    1.0    1.0
+  [total]                                                             5.0  284.0  546.0
+
+household-income
+  0-24.999                                                            1.0   38.0   62.0
+  100.000-149.999                                                     1.0   37.0   80.0
+  150.000                                                             1.0   23.0   56.0
+  25.000-49.999                                                       1.0   64.0   85.0
+  50.000-99.999                                                       1.0   83.0  157.0
+  ?                                                                   1.0    1.0    1.0
+  [total]                                                             6.0  246.0  441.0
+
+education
+  ?                                                                   1.0    1.0    1.0
+  AssociateDegree                                                     1.0   84.0  172.0
+  BachelorDegree                                                      1.0   91.0  173.0
+  GraduateDegree                                                      1.0   75.0  153.0
+  HighSchool                                                          1.0   31.0   42.0
+  LessThanHighSchool                                                  1.0    1.0    4.0
+  [total]                                                             6.0  283.0  545.0
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+  ?                                                                   1.0    1.0    1.0
+  No                                                                  1.0  239.0  176.0
+  Yes                                                                 1.0   46.0  371.0
+  [total]                                                             3.0  286.0  548.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         137               82.0359 %
+Incorrectly Classified Instances        30               17.9641 %
+Kappa statistic                          0.5791
+Mean absolute error                      0.1776
+Root mean squared error                  0.308 
+Relative absolute error                 59.2057 %
+Root relative squared error             79.5489 %
+Total Number of Instances              167     
+Ignored Class Unknown Instances                 70     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        0.000    ?          ?        ?          ?        ?         ?         ?
+                 0.632    0.082    0.800      0.632    0.706      0.588    0.745     0.565     No
+                 0.918    0.368    0.828      0.918    0.871      0.588    0.875     0.868     Yes
+Weighted Avg.    0.820    0.271    0.818      0.820    0.814      0.588    0.831     0.765     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+   0   0   0 |   a = ?
+   0  36  21 |   b = No
+   0   9 101 |   c = Yes
+

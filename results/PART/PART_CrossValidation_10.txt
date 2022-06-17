@@ -1,0 +1,103 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     StarWars
+Instances:    1186
+Attributes:   10
+              have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+              which-character-shot-first
+              are-you-familiar-with-the-expanded-universe
+              do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+              gender
+              age
+              household-income
+              education
+              do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+              do-you-consider-yourself-to-be-a-fan-of-the-star-wars-film-franchise
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = Yes AND
+which-character-shot-first = Han: Yes (198.9/13.24)
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = Yes AND
+which-character-shot-first = Greedo: Yes (112.07/8.13)
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = Yes AND
+are-you-familiar-with-the-expanded-universe = No AND
+age = 60: Yes (38.79/5.47)
+
+are-you-familiar-with-the-expanded-universe = Yes AND
+age = 18-29: Yes (31.3/4.04)
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = Yes: Yes (68.23/18.66)
+
+which-character-shot-first = none AND
+education = AssociateDegree: No (55.82/5.75)
+
+which-character-shot-first = none: No (142.08/35.91)
+
+do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe = Yes: Yes (61.08/22.07)
+
+age = 18-29: Yes (32.8/10.71)
+
+age = 60 AND
+household-income = 50.000-99.999: No (6.97/0.56)
+
+household-income = 100.000-149.999: Yes (13.53/3.83)
+
+are-you-familiar-with-the-expanded-universe = Yes AND
+household-income = 50.000-99.999: Yes (7.06/0.94)
+
+education = GraduateDegree AND
+are-you-familiar-with-the-expanded-universe = No: Yes (12.12/4.05)
+
+education = HighSchool: No (7.56/1.95)
+
+education = AssociateDegree AND
+household-income = 50.000-99.999 AND
+gender = Female: No (5.73/2.13)
+
+education = BachelorDegree: No (27.82/12.71)
+
+education = AssociateDegree: Yes (10.49/3.32)
+
+: No (3.64/1.05)
+
+Number of Rules  : 	18
+
+
+Time taken to build model: 0.13 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         667               79.7847 %
+Incorrectly Classified Instances       169               20.2153 %
+Kappa statistic                          0.5305
+Mean absolute error                      0.1888
+Root mean squared error                  0.3143
+Relative absolute error                 63.0119 %
+Root relative squared error             81.2736 %
+Total Number of Instances              836     
+Ignored Class Unknown Instances                350     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        0.000    ?          ?        ?          ?        ?         ?         ?
+                 0.620    0.111    0.743      0.620    0.676      0.535    0.745     0.557     No
+                 0.889    0.380    0.820      0.889    0.853      0.535    0.840     0.817     Yes
+Weighted Avg.    0.798    0.289    0.794      0.798    0.793      0.535    0.808     0.728     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+   0   0   0 |   a = ?
+   0 176 108 |   b = No
+   0  61 491 |   c = Yes
+

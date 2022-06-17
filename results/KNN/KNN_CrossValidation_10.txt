@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     StarWars
+Instances:    1186
+Attributes:   10
+              have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+              which-character-shot-first
+              are-you-familiar-with-the-expanded-universe
+              do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+              gender
+              age
+              household-income
+              education
+              do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+              do-you-consider-yourself-to-be-a-fan-of-the-star-wars-film-franchise
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         660               78.9474 %
+Incorrectly Classified Instances       176               21.0526 %
+Kappa statistic                          0.5242
+Mean absolute error                      0.192 
+Root mean squared error                  0.323 
+Relative absolute error                 64.0833 %
+Root relative squared error             83.5214 %
+Total Number of Instances              836     
+Ignored Class Unknown Instances                350     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        0.000    ?          ?        ?          ?        ?         ?         ?
+                 0.662    0.145    0.701      0.662    0.681      0.525    0.727     0.431     No
+                 0.855    0.338    0.831      0.855    0.843      0.525    0.827     0.801     Yes
+Weighted Avg.    0.789    0.272    0.787      0.789    0.788      0.525    0.793     0.675     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+   0   0   0 |   a = ?
+   0 188  96 |   b = No
+   0  80 472 |   c = Yes
+

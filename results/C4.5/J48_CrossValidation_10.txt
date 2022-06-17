@@ -1,0 +1,85 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     StarWars
+Instances:    1186
+Attributes:   10
+              have-you-seen-any-of-the-6-films-in-the-star-wars-franchise
+              which-character-shot-first
+              are-you-familiar-with-the-expanded-universe
+              do-you-consider-yourself-to-be-a-fan-of-the-expanded-universe
+              gender
+              age
+              household-income
+              education
+              do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise
+              do-you-consider-yourself-to-be-a-fan-of-the-star-wars-film-franchise
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = ?: Yes (0.0)
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = No
+|   are-you-familiar-with-the-expanded-universe = ?: No (0.0)
+|   are-you-familiar-with-the-expanded-universe = No
+|   |   which-character-shot-first = ?: No (0.0)
+|   |   which-character-shot-first = Greedo: Yes (65.63/30.08)
+|   |   which-character-shot-first = Han
+|   |   |   household-income = 0-24.999
+|   |   |   |   age = 18-29: Yes (12.26/1.44)
+|   |   |   |   age = 30-44: No (4.11/0.89)
+|   |   |   |   age = 45-60: Yes (2.45/1.22)
+|   |   |   |   age = 60: No (0.22/0.0)
+|   |   |   |   age = ?: Yes (0.0)
+|   |   |   household-income = 100.000-149.999: Yes (12.69/3.73)
+|   |   |   household-income = 150.000: Yes (12.69/2.73)
+|   |   |   household-income = 25.000-49.999: No (15.23/7.36)
+|   |   |   household-income = 50.000-99.999: No (29.19/11.52)
+|   |   |   household-income = ?: Yes (0.0)
+|   |   which-character-shot-first = none: No (189.82/38.59)
+|   are-you-familiar-with-the-expanded-universe = Yes
+|   |   age = 18-29: Yes (30.29/4.04)
+|   |   age = 30-44: Yes (19.18/1.02)
+|   |   age = 45-60: Yes (11.11/3.01)
+|   |   age = 60: No (12.12/1.1)
+|   |   age = ?: Yes (0.0)
+do-you-consider-yourself-to-be-a-fan-of-the-star-trek-franchise = Yes: Yes (419.01/45.5)
+
+Number of Leaves  : 	21
+
+Size of the tree : 	27
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         653               78.11   %
+Incorrectly Classified Instances       183               21.89   %
+Kappa statistic                          0.4952
+Mean absolute error                      0.1957
+Root mean squared error                  0.3211
+Relative absolute error                 65.3121 %
+Root relative squared error             83.0234 %
+Total Number of Instances              836     
+Ignored Class Unknown Instances                350     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        0.000    ?          ?        ?          ?        ?         ?         ?
+                 0.609    0.130    0.706      0.609    0.654      0.498    0.732     0.540     No
+                 0.870    0.391    0.812      0.870    0.840      0.498    0.820     0.781     Yes
+Weighted Avg.    0.781    0.302    0.776      0.781    0.777      0.498    0.790     0.699     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+   0   0   0 |   a = ?
+   0 173 111 |   b = No
+   0  72 480 |   c = Yes
+
